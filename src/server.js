@@ -4,10 +4,12 @@ const express = require('express');
 const stamper = require('../middleware/stamper');
 const notFoundHandler = require('../handlers/404');
 const errorHandler = require('../handlers/500');
+const validator = require('../middleware/validator');
 
 const logger = require('../middleware/logger');
 const getAgent = require('../middleware/getAgent');
 const square = require('../middleware/square');
+const person = require('../handlers/person');
 
 const app = express();
 
@@ -53,6 +55,8 @@ app.get('/bad', (req, res) => {
 app.get('/number/:id', square(), (req, res) => {
   res.status(200).send(`the result is ${req.number}`);
 });
+
+app.get('/person', validator, person);
 
 app.use('*', notFoundHandler);
 app.use(errorHandler);
