@@ -18,7 +18,7 @@
 
    [Heroku Main Deploy](https://yasein-express-server-main.herokuapp.com/)
 
-   [Heroku Dev Deploy](https://yasein-express-server-dev.herokuapp.com/)
+   [Heroku Dev Deploy](https://yasein-express-server-div.herokuapp.com/)
 
         Notes the Demo:
 
